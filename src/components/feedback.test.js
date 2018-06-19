@@ -8,7 +8,9 @@ describe('<Feedback/>', () => {
   });
 
   it('Renders appropriate feedback', () => {
-
+    let TEST = 'You are listening to a game!';
+    const wrapper = shallow(<Feedback feedback={TEST} />);
+    expect(wrapper.contains(TEST)).toEqual(true);
   });
 
 });
