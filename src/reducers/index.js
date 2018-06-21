@@ -1,4 +1,4 @@
-import {RESTART, MAKE_GUESS, AURAL_UPDATE} from './actions';
+import {RESTART, MAKE_GUESS, AURAL_UPDATE} from '../actions';
 
 const initialState = {
     guesses: [],
@@ -7,7 +7,7 @@ const initialState = {
     correctAnswer: Math.round(Math.random() * 100) + 1
 };
 
-export default (state = initialState, action) => {
+export const Reducer = (state = initialState, action) => {
     if (action.type === RESTART) {
         return Object.assign({}, state, {
             guesses: [],

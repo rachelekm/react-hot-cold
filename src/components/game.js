@@ -1,14 +1,11 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-import {makeGuess, restartGame} from '../actions';
-
 export class Game extends React.Component {
-
+/*
   makeGuess(guess) {
     this.props.dispatch(makeGuess(guess));
   }
@@ -17,25 +14,21 @@ export class Game extends React.Component {
     this.props.dispatch(restartGame());
   }
 
+  generateAuralUpdate() {
+    this.props.dispatch(auralUpdate());
+  }
+*/
   render() {
+    /*
     const { feedback, guesses, auralStatus } = this.state;
     const guessCount = guesses.length;
-
+*/
     return (
       <div>
-        <Header
-          onRestartGame={() => this.restartGame()}
-          //onGenerateAuralUpdate={() => this.generateAuralUpdate()}
-        />
+        <Header/>
         <main role="main">
-          <GuessSection
-            feedback={feedback}
-            guessCount={guessCount}
-            onMakeGuess={guess => this.makeGuess(guess)}
-          />
-          <StatusSection guesses={guesses} 
-            auralStatus={auralStatus}
-          />
+          <GuessSection />
+          <StatusSection />
           <InfoSection />
         </main>
       </div>
